@@ -43,3 +43,52 @@ header { height: 100vh; display: flex; align-items: center; justify-content: cen
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 .cert-card { background: var(--card); border-radius: 12px; padding: 25px; border: 1px solid #1e293b; text-align: center; transition: 0.3s; }
 .cert-card a { color: var(--primary); text-decoration: none; font-size: 0.8rem; font-weight: bold; }
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 0;
+}
+
+.cert-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    text-align: center;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.cert-item:hover {
+    transform: translateY(-10px);
+    border-color: #00f3ff;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+}
+
+.cert-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.cert-item h3 { font-size: 1.1rem; margin-bottom: 5px; color: #fff; }
+.cert-item p { font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px; }
+
+.cert-item a {
+    color: #00f3ff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #00f3ff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.cert-item a:hover {
+    background: #00f3ff;
+    color: #000;
+}
