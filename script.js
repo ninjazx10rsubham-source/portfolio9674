@@ -1,5 +1,5 @@
 // 3D Parallax Effect
-const card = document.getElementById('profile-card');
+const card = document.querySelector('.profile-card-3d');
 if(card) {
     document.addEventListener('mousemove', (e) => {
         let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
@@ -10,18 +10,13 @@ if(card) {
 
 // Typing Effect
 const text = "Future AI/ML Engineer_";
-let i = 0;
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("typing-text").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100);
+let index = 0;
+function type() {
+    const typingElement = document.querySelector(".typing-text");
+    if (typingElement && index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
     }
 }
-window.onload = typeWriter;
-
-// Theme Toggle
-const toggle = document.getElementById('theme-toggle');
-toggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-});
+window.onload = type;
