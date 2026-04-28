@@ -1,4 +1,4 @@
-// 3D Parallax Effect
+// 3D Tilt Effect
 const card = document.querySelector('.profile-card-3d');
 if(card) {
     document.addEventListener('mousemove', (e) => {
@@ -12,9 +12,9 @@ if(card) {
 const text = "Future AI/ML Engineer_";
 let index = 0;
 function type() {
-    const typingElement = document.querySelector(".typing-text");
-    if (typingElement && index < text.length) {
-        typingElement.innerHTML += text.charAt(index);
+    const el = document.querySelector(".typing-text");
+    if (el && index < text.length) {
+        el.innerHTML += text.charAt(index);
         index++;
         setTimeout(type, 100);
     }
