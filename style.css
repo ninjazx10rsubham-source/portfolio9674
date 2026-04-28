@@ -62,6 +62,18 @@ canvas {
   box-shadow: 0 0 15px cyan;
 }
 
+/* Certificates */
+img {
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px cyan;
+}
+
 .dark {
   background: white;
   color: black;
