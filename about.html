@@ -1,17 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About</title>
+  <meta charset="UTF-8">
+  <title>About | Subham Dey</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #020617;
+      color: white;
+    }
+
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    /* Certificates Section */
+    .certificates {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #0f172a, #020617);
+      padding: 20px;
+      border-radius: 20px;
+      width: 260px;
+      text-align: center;
+      transition: 0.4s;
+      border: 1px solid rgba(0,255,255,0.3);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px cyan;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: cyan;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      background: white;
+    }
+
+    /* Navbar (optional if you already have one) */
+    nav {
+      background: #0f172a;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: cyan;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+  </style>
 </head>
+
 <body>
 
-<h1>About Me</h1>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<p>
-I am a future AI/ML Engineer passionate about building intelligent systems.
-I am currently learning Python, Machine Learning, and Data Science.
-</p>
+  <!-- About Section -->
+  <div class="container">
+
+    <h1>About Me</h1>
+
+    <p>
+      Hi, I'm <b>Subham Dey</b>, a B.Tech CSE (AI & ML) student passionate about
+      Artificial Intelligence, Machine Learning, and building smart systems.
+      I love exploring new technologies and applying AI to solve real-world problems.
+    </p>
+
+    <!-- Certificates -->
+    <h1 style="margin-top:50px;">My Certificates</h1>
+
+    <div class="certificates">
+
+      <div class="card">
+        <h3>Google - Introduction to AI</h3>
+        <p>🏅 Coursera | Google</p>
+        <a href="certificates/google.pdf" target="_blank">View Certificate</a>
+      </div>
+
+      <div class="card">
+        <h3>Cisco - Introduction to Modern AI</h3>
+        <p>🏅 Cisco Networking Academy</p>
+        <a href="certificates/cisco-ai.pdf" target="_blank">View Certificate</a>
+      </div>
+
+      <div class="card">
+        <h3>YUVA AI for ALL</h3>
+        <p>🏅 IndiaAI | Coursera</p>
+        <a href="certificates/yuva-ai.pdf" target="_blank">View Certificate</a>
+      </div>
+
+      <div class="card">
+        <h3>MATLAB Programming</h3>
+        <p>🏅 Vanderbilt University</p>
+        <a href="certificates/matlab.pdf" target="_blank">View Certificate</a>
+      </div>
+
+      <div class="card">
+        <h3>AI Tools & ChatGPT Workshop</h3>
+        <p>🏅 AI Tools Workshop</p>
+        <a href="certificates/ai-tools-workshop.pdf" target="_blank">View Certificate</a>
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
