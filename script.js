@@ -1,50 +1,27 @@
-// Dark mode
-const toggle = document.getElementById("themeToggle");
-if(toggle){
-  toggle.onclick = () => document.body.classList.toggle("dark");
+// 3D Parallax Effect
+const card = document.getElementById('profile-card');
+if(card) {
+    document.addEventListener('mousemove', (e) => {
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
 }
 
-// Typing effect
-const text = "Future AI/ML Engineer | Building Smart Systems";
+// Typing Effect
+const text = "Future AI/ML Engineer_";
 let i = 0;
-
-function typing(){
-  if(i < text.length){
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 50);
-  }
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+    }
 }
-typing();
+window.onload = typeWriter;
 
-// Particle background
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-for(let i=0;i<100;i++){
-  particles.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    r: 2
-  });
-}
-
-function draw(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-
-  particles.forEach(p=>{
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle="cyan";
-    ctx.fill();
-  });
-
-  requestAnimationFrame(draw);
-}
-
-draw();
+// Theme Toggle
+const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+});
