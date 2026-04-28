@@ -2,8 +2,7 @@
 
 ## 👨‍💻 About Me
 
-Hi, I'm **Subham Dey**, a B.Tech CSE (AI & ML) student at MIT Vishwaprayag University.
-I am passionate about Artificial Intelligence, Machine Learning, and building smart systems.
+Hi, I'm **Subham Dey**, a B.Tech CSE (AI & ML) student passionate about Artificial Intelligence, Machine Learning, and building smart systems.
 
 ---
 
@@ -20,7 +19,7 @@ I am passionate about Artificial Intelligence, Machine Learning, and building sm
 
 ## 📁 Project Structure
 
-```id="q6l0fm"
+```
 portfolio/
 │
 ├── index.html
@@ -31,29 +30,31 @@ portfolio/
 ├── script.js
 │
 ├── profile.jpg
+│
 ├── certificates/
-│   ├── cert1.jpg
-│   ├── cert2.jpg
-│   ├── cert3.jpg
+│   ├── Google.pdf
+│   ├── YUVA AI.pdf
+│   ├── Matlab.pdf
 │   ├── Certificate.pdf
+│   ├── IntrotoModernAIUpdate20260428-31-kb59iw.pdf
 │
 └── README.md
 ```
 
 ---
 
-## 🖼️ Adding Your Pictures (IMPORTANT)
+## 🖼️ Adding Your Files
 
 ### 📌 1. Profile Picture
 
 * File name: `profile.jpg`
 * Place it in main folder
 
-```id="i6m4c3"
+```
 portfolio/profile.jpg
 ```
 
-Used in `index.html`:
+Use in HTML:
 
 ```html
 <img src="profile.jpg" class="profile">
@@ -61,96 +62,70 @@ Used in `index.html`:
 
 ---
 
-### 📌 2. Certificates (Images)
+### 📌 2. Certificates (PDF Files)
 
-Put all certificate images inside:
+Place all certificates inside:
 
-```id="o9zq3a"
+```
 portfolio/certificates/
 ```
 
-Example:
+Files used:
 
-* cert1.jpg
-* cert2.jpg
-* cert3.jpg
+* Google.pdf
+* YUVA AI.pdf
+* Matlab.pdf
+* Certificate.pdf
+* IntrotoModernAIUpdate20260428-31-kb59iw.pdf
 
 ---
 
-### 📌 3. Show Images on Website
+### 📌 3. Show Certificates on Website
 
 Add this inside **about.html**:
 
-```html id="g84a2k"
+```html
 <h2>My Certificates</h2>
 
 <div class="certificates">
-  <img src="certificates/cert1.jpg">
-  <img src="certificates/cert2.jpg">
-  <img src="certificates/cert3.jpg">
+
+  <a href="certificates/Google.pdf" target="_blank">Google AI Certificate</a><br><br>
+
+  <a href="certificates/YUVA AI.pdf" target="_blank">YUVA AI Certificate</a><br><br>
+
+  <a href="certificates/Matlab.pdf" target="_blank">MATLAB Certificate</a><br><br>
+
+  <a href="certificates/Certificate.pdf" target="_blank">AI Tools Workshop</a><br><br>
+
+  <a href="certificates/IntrotoModernAIUpdate20260428-31-kb59iw.pdf" target="_blank">Cisco AI Certificate</a>
+
 </div>
 ```
 
 ---
 
-### 📌 4. Add CSS for Images
+## ⚠️ Important Notes
 
-Add in **styles.css**:
-
-```css id="3l8skx"
-.certificates {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.certificates img {
-  width: 250px;
-  margin: 10px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.certificates img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px cyan;
-}
-```
-
----
-
-### 📌 5. (Optional) Add PDF Certificates
-
-You can also add clickable PDF links:
-
-```html id="z2m9xv"
-<a href="certificates/Certificate.pdf" target="_blank">
-  View Certificate PDF
-</a>
-```
-
----
-
-## ⚠️ Common Mistakes (Why images don’t show)
-
-* ❌ Wrong file name (case-sensitive)
-* ❌ Wrong folder path
-* ❌ Spaces in file names (avoid them)
-* ❌ Image not uploaded to GitHub
+* File names are **case-sensitive**
+* Keep file names **exactly same as uploaded**
+* Spaces in file names may cause issues in GitHub Pages
+* Make sure all files are uploaded correctly
 
 ---
 
 ## 🛠 Setup
 
 1. Upload all files to GitHub
-2. Add your images in correct folders
-3. Update HTML paths if needed
+2. Add your images and certificates
+3. Check file paths in HTML
 
 ---
 
-## 🌐 Deploy
+## 🌐 Deploy (GitHub Pages)
 
-* Go to **Settings → Pages**
-* Select branch → Save
+1. Go to **Settings → Pages**
+2. Select branch (main)
+3. Click **Save**
 
 ---
 
@@ -168,4 +143,4 @@ This portfolio represents my journey to becoming an AI/ML Engineer.
 
 ---
 
-⭐ Tip: Keep images clean, not too many — quality > quantity
+⭐ Tip: Keep your portfolio clean and simple — quality over quantity.
