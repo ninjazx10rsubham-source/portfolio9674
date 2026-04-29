@@ -1,38 +1,30 @@
-// 3D Tilt Effect
-const card = document.querySelector('.profile-card-3d');
-if(card) {
-    document.addEventListener('mousemove', (e) => {
-        let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-        let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    });
-}
+const card = document.getElementById('tilt-card');
 
-// Typing Effect
-const text = "Future AI/ML Engineer_";
-let index = 0;
+document.addEventListener('mousemove', (e) => {
+    if(!card) return;
+
+    // 3D Tilt Logic
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 30;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / 30;
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+
+    // Interactive Glow Logic
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty('--x', `${x}px`);
+    card.style.setProperty('--y', `${y}px`);
+});
+
+// Auto-Typing Effect
+const text = "INITIALIZING AI_ML_MODULE.EXE // STATUS: ACTIVE";
+let i = 0;
 function type() {
     const el = document.querySelector(".typing-text");
-    if (el && index < text.length) {
-        el.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(type, 100);
+    if (el && i < text.length) {
+        el.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 50);
     }
 }
 window.onload = type;
-// Scroll Reveal Observer
-const observerOptions = {
-    threshold: 0.15
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Keep your existing 3D and Typing logic below this...
