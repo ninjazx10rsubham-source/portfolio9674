@@ -1,43 +1,38 @@
-# 🚀 Subham Dey | AI/ML Engineering Portfolio
+# 🚀 Subham Dey | AI/ML Portfolio
 
-Welcome to my professional digital headquarters! This repository contains a highly animated, multi-page portfolio designed for a **Future AI/ML Engineer**. It features 3D parallax effects, glassmorphism, and a full showcase of my technical certifications.
-
----
-
-## 👨‍💻 System Summary
-I am a B.Tech CSE (AI & ML) student at MIT Vishwaprayag University. I specialize in Large Language Model (LLM) prompting, AI-driven productivity, and technical programming.
+## 👨‍💻 About Me
+Hi, I'm **Subham Dey**, a first-year B.Tech CSE (AI & ML) student at MIT Vishwaprayag University. I am passionate about Artificial Intelligence, Machine Learning, and building smart systems.
 
 ---
 
-## ✨ Core Features
-* **3D Parallax Hero:** An interactive profile card that reacts to mouse movement.
-* **Terminal Typing Effect:** Dynamic typewriter animation for professional titles.
-* **Verified Credential Grid:** A dedicated section in `about.html` to view and verify my professional certificates.
-* **Cyberpunk Aesthetic:** A high-tech dark theme with glassmorphism effects.
-* **Responsive Uplink:** Direct communication links via email, phone, and social media.
+## ✨ Features
+* **Animated UI**: Smooth transitions and typing effects.
+* **Credential Showcase**: Integrated display of AI and Programming certifications.
+* **Responsive Design**: Optimized for both mobile and desktop viewing.
+* **Interactive Elements**: 3D hover animations and custom button effects.
 
 ---
 
-## 📁 Verified Project Structure
-Your repository is organized as follows to ensure all assets load correctly:
+## 📁 Repository Structure
+Based on the current deployment:
 
-```text
+```id="q6l0fm"
 portfolio/
 │
-├── Profile Picture/            # Hero Media
-│   └── my photo.jpeg           # Circular Headshot
+├── Profile Picture/       # Folder for personal images
+│   └── my photo.jpeg      # Main profile image
 │
-├── certificates/               # Verified Credentials
+├── certificates/          # Folder for academic credentials
 │   ├── introduction-to-modern-ai.png
 │   ├── IntrotoModernAIUpdate20260428-31-kb59iw.pdf
-│   ├── YUVA AI.pdf             # IndiaAI (Coursera)
-│   ├── Matlab.pdf              # Vanderbilt University
-│   ├── Google.pdf              # Google AI
-│   └── Certificate.pdf         # be10x AI Tools Workshop
+│   ├── Google.pdf
+│   ├── Matlab.pdf
+│   ├── YUVA AI.pdf
+│   └── Certificate.pdf
 │
-├── index.html                  # Home (3D Node)
-├── about.html                  # Core (Credentials Node)
-├── projects.html               # Projects (Neural Node)
-├── contact.html                # Uplink (Contact Node)
-├── styles.css                  # Design & Layout Engine
-└── script.js                   # Interaction & 3D Engine
+├── index.html             # Homepage
+├── about.html             # Qualifications & Certificates
+├── projects.html          # Project Gallery
+├── contact.html           # Contact Information
+├── styles.css             # Main styling & animations
+└── script.js              # Interactivity & Logic
