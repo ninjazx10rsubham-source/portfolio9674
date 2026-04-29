@@ -1,56 +1,43 @@
-:root {
-    --cyan: #00f3ff;
-    --dark: #010409;
-    --panel: #0d1117;
-    --nav-h: 75px;
+/* Container for certificates */
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: var(--dark); 
-    color: white;
-    line-height: 1.5;
-    background-image: radial-gradient(circle at 1px 1px, rgba(0, 243, 255, 0.1) 1px, transparent 0);
-    background-size: 35px 35px;
+/* Individual Certificate Cards */
+.cert-card {
+    background: #1f242d;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
 }
 
-/* NAVIGATION - SOLID & VISIBLE */
-nav {
-    position: fixed; top: 0; width: 100%; height: var(--nav-h);
-    background: var(--dark); border-bottom: 2px solid var(--cyan);
-    z-index: 1000; display: flex; align-items: center; padding: 0 5%;
+.cert-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.nav-container { display: flex; align-items: center; gap: 30px; }
-.logo { font-size: 1.3rem; font-weight: 800; color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
-.nav-links { display: flex; list-style: none; gap: 20px; }
-.nav-links a { text-decoration: none; color: #8b949e; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
-.nav-links a.active { color: var(--cyan); }
-
-/* CONTENT WRAPPER - PREVENTS CUTTING */
-.main-wrapper {
-    margin-top: var(--nav-h);
-    min-height: calc(100vh - var(--nav-h));
-    padding: 40px 10%;
-    display: flex; flex-direction: column; align-items: center;
+/* 3D Hover & Glow Effect */
+.cert-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: #0ef; /* Cyan glow */
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
 }
 
-/* COMPACT PROFILE CARD (HOME) */
-.compact-card {
-    background: var(--panel); border: 1px solid #30363d; border-radius: 20px;
-    padding: 30px; width: 100%; max-width: 400px; text-align: center;
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #0ef;
+    color: #1f242d;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
 }
-
-.avatar-box { width: 100px; height: 100px; margin: 0 auto 15px; border-radius: 50%; border: 2px solid var(--cyan); overflow: hidden; }
-.avatar { width: 100%; height: 100%; object-fit: cover; }
-
-/* CREDENTIAL & PROJECT CARDS */
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%; }
-.glass-card { background: var(--panel); border: 1px solid #30363d; padding: 25px; border-radius: 12px; transition: 0.3s; }
-.glass-card:hover { border-color: var(--cyan); transform: translateY(-5px); }
-
-.badge { font-size: 0.7rem; color: var(--cyan); font-weight: 800; margin-bottom: 5px; }
-.btn-neon { display: inline-block; padding: 8px 20px; border: 1px solid var(--cyan); color: var(--cyan); text-decoration: none; border-radius: 5px; font-weight: 700; font-size: 0.75rem; margin-top: 15px; }
-.btn-neon:hover { background: var(--cyan); color: #000; }
