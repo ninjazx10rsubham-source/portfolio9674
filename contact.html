@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Subham Dey</title>
+    <title>Get In Touch | Subham Dey</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -19,20 +19,52 @@
     </header>
 
     <section class="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="heading">Let's <span>Connect!</span></h2>
+                <p>I'm currently looking for new opportunities and collaborations in AI & ML. Whether you have a question or just want to say hi, my inbox is always open!</p>
+                
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <i class='bx bxs-phone'></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9674218151</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class='bx bxs-envelope'></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>ninjazx10rsubham@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class='bx bxs-map'></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Solapur, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
 
-        <form action="mailto:ninjazx10rsubham@gmail.com" method="post" enctype="text/plain">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <div class="social-icons">
+                    <a href="https://instagram.com/subhamdey5535"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/ninjazx10rsubham-source"><i class='bx bxl-github'></i></a>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number" value="9674218151">
-                <input type="text" placeholder="Email Subject">
+
+            <div class="contact-form-box">
+                <form action="https://formspree.io/f/your-id" method="POST"> <div class="input-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Now <i class='bx bxs-paper-plane'></i></button>
+                </form>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
+        </div>
     </section>
 
     <script src="script.js"></script>
