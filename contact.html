@@ -2,63 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact | Subham Dey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Subham Dey</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav></nav>
+    <header class="header">
+        <a href="index.html" class="logo">Subham.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
 
-    <section class="container">
-        <h2 class="section-title">Establish_Uplink</h2>
-        
-        <div class="contact-panel">
-            <div class="glass-card contact-card-modern">
-                <div class="icon">📧</div>
-                <h3>GMAIL_ACCESS</h3>
-                <p>ninjazx10rsubham@gmail.com</p>
-                <a href="mailto:ninjazx10rsubham@gmail.com" class="btn-neon">Initialize Comms</a>
-            </div>
+    <section class="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
 
-            <div class="glass-card contact-card-modern">
-                <div class="icon">📸</div>
-                <h3>INSTAGRAM_OS</h3>
-                <p>@subhamdey5535</p>
-                <a href="https://instagram.com/subhamdey5535" target="_blank" class="btn-neon">Open Feed</a>
+        <form action="mailto:ninjazx10rsubham@gmail.com" method="post" enctype="text/plain">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
             </div>
-
-            <div class="glass-card contact-card-modern">
-                <div class="icon">📞</div>
-                <h3>SECURE_LINE</h3>
-                <p>+91 9674218151</p>
-                <a href="tel:9674218151" class="btn-neon">Call Signal</a>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number" value="9674218151">
+                <input type="text" placeholder="Email Subject">
             </div>
-        </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">SD<span>_AI</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="main-content">
-        <h2 class="section-title">Verified_Credentials</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <div class="cert-tag">CISCO</div>
-                <h3>Modern AI</h3>
-                <p>Cisco Networking Academy • Feb 2026</p>
-                <a href="certificates/IntrotoModernAIUpdate20260428-31-kb59iw.pdf" target="_blank" class="btn-neon">VIEW PDF</a>
-            </div>
-            
-            </div>
-    </main>
-</body>
