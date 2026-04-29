@@ -239,3 +239,75 @@ span {
     .contact-text h2 { text-align: center; }
     .home-img { width: 60vw; height: 60vw; margin-top: 4rem; }
 }
+/* --- PROJECTS SECTION STYLING --- */
+.projects {
+    padding: 12rem 9% 5rem;
+    min-height: 100vh;
+}
+
+.projects .heading {
+    margin-bottom: 5rem;
+    font-size: 5rem;
+}
+
+.projects-container {
+    display: grid;
+    /* This ensures a 3-column layout that becomes 1 column on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: center;
+    gap: 3rem;
+}
+
+.project-box {
+    background: var(--second-bg-color);
+    padding: 4rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid transparent;
+    transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-box:hover {
+    border-color: var(--main-color);
+    transform: translateY(-10px);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.project-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.project-box h3 {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-box p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+/* Ensure buttons are centered and properly sized */
+.project-box .btn {
+    padding: 1.2rem 2.8rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+/* Responsive Scaling for Projects */
+@media (max-width: 768px) {
+    .projects {
+        padding: 10rem 3% 2rem;
+    }
+    .projects-container {
+        grid-template-columns: 1fr; /* Stack vertically on small phones */
+    }
+}
