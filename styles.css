@@ -1,145 +1,95 @@
-/* --- CONTACT PAGE SPECIFIC FIXES --- */
-
-.contact-section {
-    min-height: 100vh;
-    padding: 12rem 9% 5rem; /* Large top padding to avoid header overlap */
+/* Home Section Alignment */
+.home {
     display: flex;
+    justify-content: space-between; /* Pushes text left and image right */
     align-items: center;
+    gap: 5rem;
+    padding: 10rem 9% 2rem;
+}
+
+.home-content {
+    max-width: 60rem; /* Prevents text from stretching too wide */
+}
+
+/* Image Glow Effect */
+.home-img .glowing-circle {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.contact-wrapper {
-    display: flex;
-    gap: 6rem;
+.home-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: .4rem solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    transition: .5s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+/* Contact Grid Fix */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Exact side-by-side split */
+    align-items: center;
+    gap: 8rem;
     width: 100%;
-    max-width: 1200px;
-    flex-wrap: wrap; /* Important: prevents overlapping on small screens */
 }
 
-/* Info Panel Styling */
-.contact-info-panel {
-    flex: 1;
-    min-width: 320px;
-}
-
-.contact-info-panel .heading {
+.contact-text h2 {
     text-align: left;
-    margin-bottom: 2rem;
-    font-size: 4.5rem;
+    font-size: 5rem;
 }
 
-.description {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 3rem;
-}
-
-.info-details {
-    margin-bottom: 4rem;
-}
-
-.info-box {
+.contact-list .item {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-    font-size: 1.7rem;
-}
-
-.info-box i {
-    font-size: 2.8rem;
+    gap: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
     color: var(--main-color);
 }
 
-/* Form Panel Styling */
-.contact-form-panel {
-    flex: 1.2;
-    min-width: 350px;
+.contact-form-card {
     background: var(--second-bg-color);
     padding: 4rem;
     border-radius: 2.5rem;
-    box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 238, 255, 0.1); /* Subtle cyan border */
 }
 
-.contact-form-panel form {
+/* Form Alignment Fix */
+.contact-form-card form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.dual-input {
-    display: flex;
-    gap: 2rem;
-}
-
-.contact-form-panel input, 
-.contact-form-panel textarea {
-    width: 100%;
-    padding: 1.8rem;
+.contact-form-card input, 
+.contact-form-card textarea {
     background: var(--bg-color);
-    border-radius: 1.2rem;
-    color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: white;
     font-size: 1.5rem;
-    border: 0.1rem solid transparent;
-    transition: 0.3s;
 }
 
-.contact-form-panel input:focus, 
-.contact-form-panel textarea:focus {
-    border-color: var(--main-color);
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-.social-links-row a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2.2rem;
-    color: var(--main-color);
-    margin-right: 2rem;
-    transition: .5s ease;
-}
-
-.social-links-row a:hover {
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-/* Ensure Button doesn't span full width unless wanted */
-.contact-form-panel .btn {
-    width: max-content;
-    padding: 1.5rem 4rem;
-    cursor: pointer;
-}
-.social-links-row {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.social-links-row a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2.5rem;
-    color: var(--main-color);
-    transition: .5s ease;
-}
-
-.social-links-row a:hover {
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 2rem var(--main-color);
-    transform: translateY(-5px);
+/* Responsive Fix: Stacks them on mobile so they don't overwrite */
+@media (max-width: 991px) {
+    .home, .contact-container {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .contact-text h2 {
+        text-align: center;
+    }
 }
