@@ -20,3 +20,19 @@ function type() {
     }
 }
 window.onload = type;
+// Scroll Reveal Observer
+const observerOptions = {
+    threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Keep your existing 3D and Typing logic below this...
