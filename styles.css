@@ -1,114 +1,96 @@
 :root {
     --primary: #00f3ff;
-    --secondary: #bc13fe;
-    --dark: #020617;
+    --bg: #020617;
+    --card-bg: rgba(15, 23, 42, 0.8);
     --text: #f8fafc;
 }
 
-/* CYBER SCANLINE */
-.scanline {
-    position: fixed;
-    top: 0;
-    left: 0;
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
+}
+
+/* SMALLER, BETTER PROFILE DESIGN */
+.profile-frame {
+    position: relative;
+    width: 110px; /* Reduced size for elegance */
+    height: 110px;
+    margin: 0 auto 25px;
+}
+
+.profile-wrapper {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    background-size: 100% 2px, 3px 100%;
-    pointer-events: none;
-    z-index: 2000;
-}
-
-/* 3D FLOATING CARD */
-.profile-card-3d {
-    position: relative;
-    transform-style: preserve-3d;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(0, 243, 255, 0.3);
-    padding: 60px 50px;
-    border-radius: 40px;
-    box-shadow: 0 0 50px rgba(0, 243, 255, 0.1);
-    transition: transform 0.1s ease-out;
-}
-
-.card-glow {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at var(--x) var(--y), rgba(0, 243, 255, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-    border-radius: 40px;
-}
-
-/* GLITCH EFFECT */
-.glitch-text {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: 5px;
-    position: relative;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.glitch-text::before, .glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--dark);
-}
-
-.glitch-text:hover::before {
-    left: 2px;
-    text-shadow: -2px 0 var(--secondary);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-/* STATUS BAR */
-.status-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--primary);
-    animation: pulse 2s infinite;
-}
-
-/* CYBER BUTTONS */
-.btn-cyber {
-    position: relative;
-    padding: 15px 35px;
-    font-size: 0.85rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--primary);
-    background: transparent;
-    border: 1px solid var(--primary);
-    text-decoration: none;
+    border: 2px solid var(--primary);
+    padding: 5px;
+    background: linear-gradient(45deg, var(--primary), transparent);
     overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: brightness(1.1);
+}
+
+.online-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #10b981;
+    border: 3px solid var(--bg);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #10b981;
+}
+
+/* MODERN TERMINAL BOX */
+.terminal-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 20px 0 30px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--primary);
+    border: 1px solid rgba(0, 243, 255, 0.1);
+}
+
+.role-tag {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* CYBERPUNK BUTTONS */
+.action-grid { display: flex; gap: 15px; justify-content: center; }
+
+.cyber-btn {
+    text-decoration: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 12px 25px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
     transition: 0.3s;
+    background: rgba(0, 243, 255, 0.05);
 }
 
-.btn-cyber.primary {
-    background: rgba(0, 243, 255, 0.1);
-}
-
-.btn-cyber:hover {
+.cyber-btn:hover {
     background: var(--primary);
     color: #000;
-    box-shadow: 0 0 30px var(--primary);
+    box-shadow: 0 0 20px var(--primary);
 }
 
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
+.cyber-btn.secondary {
+    border-color: #fff;
+    color: #fff;
 }
