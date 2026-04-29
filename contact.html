@@ -1,27 +1,56 @@
-<section class="contact">
-    <div class="contact-container">
-        <div class="contact-text">
-            <h2 class="heading">Get in <span>Touch</span></h2>
-            <div class="contact-list">
-                <div class="item"><i class='bx bxs-phone'></i> +91 9674218151</div>
-                <div class="item"><i class='bx bxs-envelope'></i> ninjazx10rsubham@gmail.com</div>
-                <div class="item"><i class='bx bxs-map'></i> Solapur, MH, India</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- CRITICAL: This tag fixes the "oversized" and connection scaling issues -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Subham Dey</title>
+    
+    <!-- Make sure this filename matches your CSS file exactly -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Boxicons for the icons used in your HTML -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Subham.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-text">
+                <h2 class="heading">Get in <span>Touch</span></h2>
+                <div class="contact-list">
+                    <div class="item"><i class='bx bxs-phone'></i> +91 9674218151[cite: 1]</div>
+                    <div class="item"><i class='bx bxs-envelope'></i> ninjazx10rsubham@gmail.com[cite: 1]</div>
+                    <div class="item"><i class='bx bxs-map'></i> Solapur, MH, India[cite: 1]</div>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/subhamdey5535/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100076226685810" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://github.com/ninjazx10rsubham-source" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
             </div>
 
-            <div class="social-links-row">
-                <a href="https://www.instagram.com/subhamdey5535/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100076226685810" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="https://github.com/ninjazx10rsubham-source" target="_blank"><i class='bx bxl-github'></i></a>
+            <div class="contact-form-card">
+                <form action="#">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Now</button>
+                </form>
             </div>
         </div>
+    </section>
 
-        <div class="contact-form-card">
-            <form action="#">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send Now</button>
-            </form>
-        </div>
-    </div>
-</section>
+</body>
+</html>
