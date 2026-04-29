@@ -2,19 +2,21 @@
     --cyan: #00f3ff;
     --dark: #010409;
     --panel: #0d1117;
-    --nav-h: 70px; /* Reduced nav height */
+    --nav-h: 75px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body { 
-    font-family: 'Space Grotesk', sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     background-color: var(--dark); 
     color: white;
-    height: 100vh;
-    overflow: hidden; /* Prevents unwanted scrolling */
+    line-height: 1.5;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 243, 255, 0.1) 1px, transparent 0);
+    background-size: 35px 35px;
 }
 
+/* NAVIGATION - SOLID & VISIBLE */
 nav {
     position: fixed; top: 0; width: 100%; height: var(--nav-h);
     background: var(--dark); border-bottom: 2px solid var(--cyan);
@@ -22,58 +24,33 @@ nav {
 }
 
 .nav-container { display: flex; align-items: center; gap: 30px; }
-.logo { font-size: 1.2rem; font-weight: 800; color: var(--cyan); }
-.nav-links { display: flex; list-style: none; gap: 15px; }
-.nav-links a { text-decoration: none; color: #8b949e; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.logo { font-size: 1.3rem; font-weight: 800; color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { text-decoration: none; color: #8b949e; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
 .nav-links a.active { color: var(--cyan); }
 
-/* CENTERED VIEWPORT - NO CUTTING */
-.viewport-center {
-    padding-top: var(--nav-h);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* CONTENT WRAPPER - PREVENTS CUTTING */
+.main-wrapper {
+    margin-top: var(--nav-h);
+    min-height: calc(100vh - var(--nav-h));
+    padding: 40px 10%;
+    display: flex; flex-direction: column; align-items: center;
 }
 
-/* COMPACT CARD DESIGN */
+/* COMPACT PROFILE CARD (HOME) */
 .compact-card {
-    background: var(--panel);
-    border: 1px solid #30363d;
-    border-radius: 20px;
-    padding: 25px; /* Reduced padding */
-    width: 90%;
-    max-width: 380px; /* Thinner card */
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    background: var(--panel); border: 1px solid #30363d; border-radius: 20px;
+    padding: 30px; width: 100%; max-width: 400px; text-align: center;
 }
 
-/* SMALLER AVATAR */
-.avatar-box {
-    position: relative; width: 90px; height: 90px; margin: 0 auto 15px;
-}
-.avatar {
-    width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
-    border: 2px solid var(--cyan); position: relative; z-index: 2;
-}
+.avatar-box { width: 100px; height: 100px; margin: 0 auto 15px; border-radius: 50%; border: 2px solid var(--cyan); overflow: hidden; }
+.avatar { width: 100%; height: 100%; object-fit: cover; }
 
-/* TYPOGRAPHY */
-.name-header { font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 2px; }
-.role-badge { font-size: 0.7rem; color: #8b949e; letter-spacing: 3px; font-weight: 700; margin-bottom: 15px; }
+/* CREDENTIAL & PROJECT CARDS */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%; }
+.glass-card { background: var(--panel); border: 1px solid #30363d; padding: 25px; border-radius: 12px; transition: 0.3s; }
+.glass-card:hover { border-color: var(--cyan); transform: translateY(-5px); }
 
-/* MINI TERMINAL */
-.mini-terminal {
-    background: #000; border: 1px solid #30363d; border-radius: 8px;
-    margin-bottom: 20px; padding: 10px; text-align: left;
-}
-.t-body { font-family: monospace; font-size: 0.75rem; }
-.t-user { color: var(--cyan); }
-
-/* COMPACT BUTTONS */
-.btn-row { display: flex; gap: 10px; }
-.action-btn {
-    flex: 1; padding: 10px 0; border: 1px solid var(--cyan); color: var(--cyan);
-    text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.7rem; transition: 0.3s;
-}
-.action-btn.primary { background: var(--cyan); color: #000; }
-.action-btn:hover { transform: translateY(-2px); box-shadow: 0 0 10px var(--cyan); }
+.badge { font-size: 0.7rem; color: var(--cyan); font-weight: 800; margin-bottom: 5px; }
+.btn-neon { display: inline-block; padding: 8px 20px; border: 1px solid var(--cyan); color: var(--cyan); text-decoration: none; border-radius: 5px; font-weight: 700; font-size: 0.75rem; margin-top: 15px; }
+.btn-neon:hover { background: var(--cyan); color: #000; }
